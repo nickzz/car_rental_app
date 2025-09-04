@@ -1,10 +1,10 @@
-import jwtDecode from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 
 export const getUserRole = () => {
-  const token = localStorage.getItem('authToken');
+  const token = sessionStorage.getItem('authToken');
   if (!token) return null;
   const decoded = jwtDecode(token);
   return decoded?.role;
 };
 
-export const isAuthenticated = () => !!localStorage.getItem('authToken');
+export const isAuthenticated = () => !!sessionStorage.getItem('authToken');

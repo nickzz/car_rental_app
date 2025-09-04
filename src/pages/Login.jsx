@@ -13,9 +13,9 @@ export default function Login() {
       const { token, role } = response.data;
 
       // Save token and role
-      localStorage.setItem('authToken', token);
-      localStorage.setItem('userRole', role);
-      navigate('/dashboard');
+      sessionStorage.setItem('authToken', token);
+      sessionStorage.setItem('userRole', role);
+      navigate('/');
     } catch (error) {
       alert('Login failed: ' + error.response?.data?.message);
     }

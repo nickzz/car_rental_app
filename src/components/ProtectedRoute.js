@@ -3,7 +3,7 @@ import { isAuthenticated, getUserRole } from '../auth';
 
 const ProtectedRoute = ({ children, role }) => {
   if (!isAuthenticated()) return <Navigate to="/login" />;
-  if (role && getUserRole() !== role) return <Navigate to="/dashboard" />;
+  if (role && getUserRole() !== role) return <Navigate to="/" />;
   return children;
 };
 

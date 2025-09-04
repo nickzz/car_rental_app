@@ -6,7 +6,7 @@ const API_BASE = 'http://localhost:5052/api/bookings';
 
 const httpHeader = {
     headers: {
-      Authorization: `Bearer ${localStorage.getItem('authToken')}`
+      Authorization: `Bearer ${sessionStorage.getItem('authToken')}`
     }
 }
 
