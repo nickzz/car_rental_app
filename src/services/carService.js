@@ -1,8 +1,7 @@
 // src/services/authService.js
 import axios from 'axios';
 
-// const API_BASE = 'https://car-rental-wr0b.onrender.com';
-const API_BASE = 'http://localhost:5052/api/cars';
+const API_BASE = `${process.env.REACT_APP_API_BASE}/cars`
 
 const httpHeader = {
     headers: {
